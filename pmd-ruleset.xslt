@@ -32,9 +32,6 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <th>message</th>
       <th>ref</th>
       <th>name_value</th>
-      <th></th>
-
-      
 
     </tr>
     <xsl:for-each select="ruleset/rule">

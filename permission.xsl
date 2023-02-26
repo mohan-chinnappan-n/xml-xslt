@@ -9,12 +9,10 @@
                     href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
                     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
                     crossorigin="anonymous"></link>
-
-                    
             </head>
             <body style='min-height: 75rem; padding-top: 3.5rem;'>
                 <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-                    <a class="navbar-brand" href="#">Profile</a>
+                    <a class="navbar-brand" href="#">$entity</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false"
@@ -26,29 +24,18 @@
                             <li class="nav-item active">
                                 <a class="nav-link" href="#">Home</a>
                             </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">
-                                    <xsl:value-of select="Profile/label" />
-                                </a>
-                            </li>
                         </ul>
                     </div>
                 </nav>
 
                 <!-- p><xsl:value-of select="document-uri()"/></p -->
-                <div class='container'>
-                  <h5> userLicense: <xsl:value-of select="Profile/userLicense" /></h5>
-                  <h5> custom: <xsl:value-of select="Profile/custom" /></h5>
 
-                <ul class='list-group list-group-flush' style="width:400px;">
+                <ul class='list-group' style="width:400px;">
                     <li class='list-group-item'>
                         <a href="#applicationVisibilities">applicationVisibilities</a>
                     </li>
                     <li class='list-group-item'>
                         <a href="#tabSettings">tabSettings</a>
-                    </li>
-                    <li class='list-group-item'>
-                        <a href="#tabVisibilities">tabVisibilities</a>
                     </li>
 
                     <li class='list-group-item'>
@@ -69,14 +56,6 @@
                         <a href="#userPermissions">userPermissions</a>
                     </li>
 
-                    <li class='list-group-item'>
-                        <a href="#recordTypeVisibilities">recordTypeVisibilities</a>
-                    </li>
-
-                    <li class='list-group-item'>
-                        <a href="#customMetadataTypeAccesses">customMetadataTypeAccesses</a>
-                    </li>
-
 
                 </ul>
 
@@ -91,35 +70,7 @@
                         <th>default</th>
                         <th>visible</th>
                     </tr>
-                    <xsl:apply-templates select="Profile/applicationVisibilities" />
-                </table>
-
-
-                <!-- tabSettings -->
-                <a name="tabSettings"></a>
-                <h3>tabSettings</h3>
-                <table style='width:400px;'
-                    class="table table-light table-bordered table-striped table-hover">
-
-                        <tr>
-                        <th>tab</th>
-                        <th>visibility</th>
-                    </tr>
-                    <xsl:apply-templates select="Profile/tabSettings" />
-                </table>
-
-
-                <!-- tabVisibilities -->
-                <a name="tabVisibilities"></a>
-                <h3>tabVisibilities</h3>
-                <table style='width:400px;'
-                    class="table table-light table-bordered table-striped table-hover">
-
-                        <tr>
-                        <th>tab</th>
-                        <th>visibility</th>
-                    </tr>
-                    <xsl:apply-templates select="Profile/tabVisibilities" />
+                    <xsl:apply-templates select="$entity/applicationVisibilities" />
                 </table>
 
 
@@ -133,7 +84,7 @@
                         <th>apexClass</th>
                         <th>enabled</th>
                     </tr>
-                    <xsl:apply-templates select="Profile/classAccesses" />
+                    <xsl:apply-templates select="$entity/classAccesses" />
                 </table>
 
                 <!-- layoutAssignments -->
@@ -145,7 +96,7 @@
                     <tr>
                         <th>layout</th>
                     </tr>
-                    <xsl:apply-templates select="Profile/layoutAssignments" />
+                    <xsl:apply-templates select="$entity/layoutAssignments" />
                 </table>
 
                 <!-- fieldPermissions -->
@@ -159,7 +110,7 @@
                         <th>readable</th>
                         <th>editable</th>
                     </tr>
-                    <xsl:apply-templates select="Profile/fieldPermissions" />
+                    <xsl:apply-templates select="$entity/fieldPermissions" />
                 </table>
 
 
@@ -178,8 +129,9 @@
                         <th>viewAllRecords</th>
                         <th>modifyAllRecords</th>
                     </tr>
-                    <xsl:apply-templates select="Profile/objectPermissions" />
+                    <xsl:apply-templates select="$entity/objectPermissions" />
                 </table>
+
 
 
                 <!-- userPermissions -->
@@ -197,40 +149,23 @@
                         <th>viewAllRecords</th>
                         <th>modifyAllRecords</th>
                     </tr>
-                    <xsl:apply-templates select="Profile/userPermissions" />
+                    <xsl:apply-templates select="$entity/userPermissions" />
                 </table>
 
 
-                  <!-- recordTypeVisibilities -->
-                  <a name="recordTypeVisibilities"></a>
-                  <h3>recordTypeVisibilities</h3>
-                  <table
-                      style='width:640px;'
-                      class="table table-light table-bordered table-striped table-hover">
-                      <tr>
-                          <th>recordType</th>
-                          <th>visible</th>
-                      </tr>
-                      <xsl:apply-templates select="Profile/recordTypeVisibilities" />
-                  </table>
 
+                <!-- tabSettings -->
+                <a name="tabSettings"></a>
+                <h3>tabSettings</h3>
+                <table style='width:400px;'
+                    class="table table-light table-bordered table-striped table-hover">
 
-
-                     <!-- customMetadataTypeAccesses -->
-                     <a name="customMetadataTypeAccesses"></a>
-                     <h3>customMetadataTypeAccesses</h3>
-                     <table
-                         style='width:640px;'
-                         class="table table-light table-bordered table-striped table-hover">
-                         <tr>
-                             <th>name</th>
-                             <th>enabled</th>
-                         </tr>
-                         <xsl:apply-templates select="Profile/customMetadataTypeAccesses" />
-                     </table>
-   
-
-                </div>
+                    <tr>
+                        <th>tab</th>
+                        <th>visibility</th>
+                    </tr>
+                    <xsl:apply-templates select="$entity/tabSettings" />
+                </table>
             </body>
         </html>
     </xsl:template>
@@ -324,51 +259,32 @@
     <xsl:template match="userPermissions">
         <xsl:for-each select=".">
             <tr>
-                <td> <xsl:value-of select="name" /> </td>
-                <td> <xsl:value-of select="enabled" /> </td>
-                <td> <xsl:value-of select="modifyAllRecords" /> </td>
+                <td>
+                    <xsl:value-of select="name" />
+                </td>
+                <td>
+                    <xsl:value-of select="enabled" />
+                </td>
+                    <xsl:value-of select="modifyAllRecords" />
+                </td>
             </tr>
         </xsl:for-each>
     </xsl:template>
+
 
 
     <xsl:template match="tabSettings">
         <xsl:for-each select=".">
             <tr>
-                <td> <xsl:value-of select="tab" /> </td>
-                <td> <xsl:value-of select="visibility" /> </td>
+                <td>
+                    <xsl:value-of select="tab" />
+                </td>
+                <td>
+                    <xsl:value-of select="visibility" />
+                </td>
             </tr>
         </xsl:for-each>
     </xsl:template>
-
-    <xsl:template match="tabVisibilities">
-        <xsl:for-each select=".">
-            <tr>
-                <td> <xsl:value-of select="tab" /> </td>
-                <td> <xsl:value-of select="visibility" /> </td>
-            </tr>
-        </xsl:for-each>
-    </xsl:template>
-
-
-    <xsl:template match="recordTypeVisibilities">
-        <xsl:for-each select=".">
-            <tr>
-                <td> <xsl:value-of select="recordType" /> </td>
-                <td> <xsl:value-of select="visible" /> </td>
-            </tr>
-        </xsl:for-each>
-    </xsl:template>
-
-    <xsl:template match="customMetadataTypeAccesses">
-        <xsl:for-each select=".">
-            <tr>
-                <td> <xsl:value-of select="name" /> </td>
-                <td> <xsl:value-of select="enabled  " /> </td>
-            </tr>
-        </xsl:for-each>
-    </xsl:template>
-
 
 
 </xsl:stylesheet>

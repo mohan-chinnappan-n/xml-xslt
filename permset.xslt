@@ -247,15 +247,15 @@
 
     <tr>
         <th>tab</th>
-        <th>tab</th>
+        <th>visibility</th>
     </tr>
-    <xsl:for-each  select="userPermissions">
+    <xsl:for-each  select="tabSettings">
         <tr>
             <td>
                 <xsl:value-of select="tab" />
             </td>
             <td>
-                <xsl:value-of select="tab" />
+                <xsl:value-of select="visibility" />
             </td>
         </tr>
     </xsl:for-each>

@@ -220,25 +220,30 @@
 
     <h3>tabSettings</h3>
 
-
-<table style='width:400px;' class="table table-light table-bordered table-striped table-hover">
-
-    <tr>
-        <th>tab</th>
-        <th>tab</th>
-    </tr>
-    <xsl:for-each  select="userPermissions">
+    <xsl:template match="PermissionSet">
+        <a name="tabSettings"></a>
+    
+        <h3>tabSettings</h3>
+    
+    
+    <table style='width:400px;' class="table table-light table-bordered table-striped table-hover">
+    
         <tr>
-            <td>
-                <xsl:value-of select="tab" />
-            </td>
-            <td>
-                <xsl:value-of select="tab" />
-            </td>
+            <th>tab</th>
+            <th>visibility</th>
         </tr>
-    </xsl:for-each>
-</table>
-</xsl:template>
+        <xsl:for-each  select="tabSettings">
+            <tr>
+                <td>
+                    <xsl:value-of select="tab" />
+                </td>
+                <td>
+                    <xsl:value-of select="visibility" />
+                </td>
+            </tr>
+        </xsl:for-each>
+    </table>
+    </xsl:template>
 
 
 </xsl:stylesheet>

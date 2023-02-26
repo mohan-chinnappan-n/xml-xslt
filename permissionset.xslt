@@ -37,12 +37,16 @@
 
                 <!-- p><xsl:value-of select="document-uri()"/></p -->
                 <div class='container'>
+
                 <ul class='list-group list-group-flush' style="width:400px;">
                     <li class='list-group-item'>
                         <a href="#applicationVisibilities">applicationVisibilities</a>
                     </li>
                     <li class='list-group-item'>
                         <a href="#tabSettings">tabSettings</a>
+                    </li>
+                    <li class='list-group-item'>
+                        <a href="#tabVisibilities">tabVisibilities</a>
                     </li>
 
                     <li class='list-group-item'>
@@ -65,6 +69,10 @@
 
                     <li class='list-group-item'>
                         <a href="#recordTypeVisibilities">recordTypeVisibilities</a>
+                    </li>
+
+                    <li class='list-group-item'>
+                        <a href="#customMetadataTypeAccesses">customMetadataTypeAccesses</a>
                     </li>
 
 
@@ -96,6 +104,20 @@
                         <th>visibility</th>
                     </tr>
                     <xsl:apply-templates select="PermissionSet/tabSettings" />
+                </table>
+
+
+                <!-- tabVisibilities -->
+                <a name="tabVisibilities"></a>
+                <h3>tabVisibilities</h3>
+                <table style='width:400px;'
+                    class="table table-light table-bordered table-striped table-hover">
+
+                        <tr>
+                        <th>tab</th>
+                        <th>visibility</th>
+                    </tr>
+                    <xsl:apply-templates select="PermissionSet/tabVisibilities" />
                 </table>
 
 
@@ -189,6 +211,22 @@
                       </tr>
                       <xsl:apply-templates select="PermissionSet/recordTypeVisibilities" />
                   </table>
+
+
+
+                     <!-- customMetadataTypeAccesses -->
+                     <a name="customMetadataTypeAccesses"></a>
+                     <h3>customMetadataTypeAccesses</h3>
+                     <table
+                         style='width:640px;'
+                         class="table table-light table-bordered table-striped table-hover">
+                         <tr>
+                             <th>name</th>
+                             <th>enabled</th>
+                         </tr>
+                         <xsl:apply-templates select="PermissionSet/customMetadataTypeAccesses" />
+                     </table>
+   
 
                 </div>
             </body>
@@ -301,6 +339,15 @@
         </xsl:for-each>
     </xsl:template>
 
+    <xsl:template match="tabVisibilities">
+        <xsl:for-each select=".">
+            <tr>
+                <td> <xsl:value-of select="tab" /> </td>
+                <td> <xsl:value-of select="visibility" /> </td>
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
+
 
     <xsl:template match="recordTypeVisibilities">
         <xsl:for-each select=".">
@@ -310,6 +357,16 @@
             </tr>
         </xsl:for-each>
     </xsl:template>
+
+    <xsl:template match="customMetadataTypeAccesses">
+        <xsl:for-each select=".">
+            <tr>
+                <td> <xsl:value-of select="name" /> </td>
+                <td> <xsl:value-of select="enabled  " /> </td>
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
+
 
 
 </xsl:stylesheet>

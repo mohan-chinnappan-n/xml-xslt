@@ -217,15 +217,7 @@
 
 <xsl:template match="PermissionSet">
     <a name="tabSettings"></a>
-
     <h3>tabSettings</h3>
-
-    <xsl:template match="PermissionSet">
-        <a name="tabSettings"></a>
-    
-        <h3>tabSettings</h3>
-    
-    
     <table style='width:400px;' class="table table-light table-bordered table-striped table-hover">
     
         <tr>

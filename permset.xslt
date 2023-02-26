@@ -31,6 +31,7 @@
                  <li class='list-group-item'><a href="#fieldPermissions">fieldPermissions</a></li>
                 <li class='list-group-item'><a href="#objectPermissions">objectPermissions</a></li>
                 <li class='list-group-item'><a href="#userPermissions">userPermissions</a></li>
+                <li class='list-group-item'><a href="#tabSettings">tabSettings</a></li>
                 </ul>
 
 
@@ -140,6 +141,28 @@
             </xsl:for-each>
         </table>
     </xsl:template>
+    <xsl:template match="PermissionSet">
+        <a name="customPermissions"></a>
+        <h3>customPermissions</h3>   
+        
+        <table style='width:400px;' class="table table-light table-bordered table-striped table-hover">
+            <tr>
+                <th>enabled</th>
+                <th>name</th>
+            </tr>
+            <xsl:for-each  select="customPermissions">
+                <tr>
+                    <td>
+                        <xsl:value-of select="enabled" />
+                    </td>
+                    <td>
+                        <xsl:value-of select="name" />
+                    </td>
+                </tr>
+            </xsl:for-each>
+        </table>
+    </xsl:template>
+
     
 
     <xsl:template match="PermissionSet">
@@ -212,5 +235,32 @@
         </xsl:for-each>
     </table>
 </xsl:template>
+
+
+<xsl:template match="PermissionSet">
+    <a name="tabSettings"></a>
+
+    <h3>tabSettings</h3>
+
+
+<table style='width:400px;' class="table table-light table-bordered table-striped table-hover">
+
+    <tr>
+        <th>tab</th>
+        <th>tab</th>
+    </tr>
+    <xsl:for-each  select="userPermissions">
+        <tr>
+            <td>
+                <xsl:value-of select="tab" />
+            </td>
+            <td>
+                <xsl:value-of select="tab" />
+            </td>
+        </tr>
+    </xsl:for-each>
+</table>
+</xsl:template>
+
 
 </xsl:stylesheet>

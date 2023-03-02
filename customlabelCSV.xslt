@@ -7,12 +7,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:template match="/">
 <xsl:variable name='newline'><xsl:text>
 </xsl:text></xsl:variable>
-<xsl:text>FullName,value,shortDescription,categories,language,protected</xsl:text>
+<xsl:text>FullName&#x9;value&#x9;shortDescription&#x9;categories&#x9;language&#x9;protected</xsl:text>
 <xsl:text>
 </xsl:text>
 <xsl:for-each select="CustomLabels/labels">
     <xsl:for-each select="."> 
-<xsl:value-of select="concat( &quot;fullName &quot;,', &quot;',value &quot;,',', &quot;shortDescription &quot;,',', &quot;categories &quot;,',', &quot;language &quot;,',', &quot;protected &quot;,'&#xA;')"/>
+<xsl:value-of select="concat(fullName,'&#x9;',value,'&#x9;',shortDescription,'&#x9;',categories,'&#x9;',language,'&#x9;',protected'&#xA;')"/>
 </xsl:for-each>
 </xsl:for-each>
 </xsl:template>

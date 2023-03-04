@@ -1,6 +1,6 @@
  {
           "applicationVisibilities": "application",
-          "classAccesses": "ApexClass",
+          "classAccesses": "apexClass",
           "customPermissions":"name",
           "customMetadataTypeAccesses":"name",
           "fieldPermissions":"field",

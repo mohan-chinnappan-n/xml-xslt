@@ -1,0 +1,12 @@
+ [
+    "applicationVisibilities",
+    "classAccesses",
+    "customPermissions",
+    "customMetadataTypeAccesses",
+    "fieldPermissions",
+    "layoutAssignments",
+    "objectPermissions",
+    "recordTypeVisibilities",
+    "tabVisibilities",
+    "userPermissions"
+ ]

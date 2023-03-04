@@ -1,12 +1,13 @@
- [
-    "applicationVisibilities",
-    "classAccesses",
-    "customPermissions",
-    "customMetadataTypeAccesses",
-    "fieldPermissions",
-    "layoutAssignments",
-    "objectPermissions",
-    "recordTypeVisibilities",
-    "tabVisibilities",
-    "userPermissions"
- ]
+ {
+          "applicationVisibilities": "application",
+          "classAccesses": "ApexClass",
+          "customPermissions":"name",
+          "customMetadataTypeAccesses":"name",
+          "fieldPermissions":"field",
+          "layoutAssignments":"layout",
+          "objectPermissions":"object",
+          "recordTypeVisibilities":"recordType",
+          "tabVisibilities":"tab",
+          "userPermissions": "name"
+
+ }

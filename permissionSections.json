@@ -8,6 +8,9 @@
           "objectPermissions":"object",
           "recordTypeVisibilities":"recordType",
           "tabVisibilities":"tab",
-          "userPermissions": "name"
+          "userPermissions": "name",
+          "customSettingAccesses": "name",
+          "pageAccesses":"apexPage"
+
 
  }

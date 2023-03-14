@@ -100,6 +100,7 @@
                         <th>application</th>
                         <th>default</th>
                         <th>visible</th>
+                        <th> <xsl:value-of select="count(PermissionSet/applicationVisibilities)" /> </th>
                     </tr>
                     <xsl:apply-templates select="PermissionSet/applicationVisibilities" />
                 </table>
@@ -114,6 +115,7 @@
                         <tr>
                         <th>tab</th>
                         <th>visibility</th>
+                        <th> <xsl:value-of select="count(PermissionSet/tabSettings)" /> </th>
                     </tr>
                     <xsl:apply-templates select="PermissionSet/tabSettings" />
                 </table>
@@ -128,6 +130,7 @@
                         <tr>
                         <th>tab</th>
                         <th>visibility</th>
+                        <th> <xsl:value-of select="count(PermissionSet/tabVisibilities)" /> </th>
                     </tr>
                     <xsl:apply-templates select="PermissionSet/tabVisibilities" />
                 </table>
@@ -142,6 +145,7 @@
                     <tr>
                         <th>apexClass</th>
                         <th>enabled</th>
+                        <th> <xsl:value-of select="count(PermissionSet/classAccesses)" /> </th>
                     </tr>
                     <xsl:apply-templates select="PermissionSet/classAccesses" />
                 </table>
@@ -154,6 +158,7 @@
                     class="table table-light table-bordered table-striped table-hover">
                     <tr>
                         <th>layout</th>
+                        <th> <xsl:value-of select="count(PermissionSet/layoutAssignments)" /> </th>
                     </tr>
                     <xsl:apply-templates select="PermissionSet/layoutAssignments" />
                 </table>
@@ -168,6 +173,7 @@
                         <th>field</th>
                         <th>readable</th>
                         <th>editable</th>
+                        <th> <xsl:value-of select="count(PermissionSet/fieldPermissions)" /> </th>
                     </tr>
                     <xsl:apply-templates select="PermissionSet/fieldPermissions" />
                 </table>
@@ -187,6 +193,7 @@
                         <th>allowRead</th>
                         <th>viewAllRecords</th>
                         <th>modifyAllRecords</th>
+                        <th> <xsl:value-of select="count(PermissionSet/objectPermissions)" /> </th>
                     </tr>
                     <xsl:apply-templates select="PermissionSet/objectPermissions" />
                 </table>
@@ -206,6 +213,9 @@
                         <th>allowRead</th>
                         <th>viewAllRecords</th>
                         <th>modifyAllRecords</th>
+                        <th> <xsl:value-of select="count(PermissionSet/userPermissions)" />
+                        
+                        </th>
                     </tr>
                     <xsl:apply-templates select="PermissionSet/userPermissions" />
                 </table>
@@ -220,6 +230,7 @@
                       <tr>
                           <th>recordType</th>
                           <th>visible</th>
+                          <th> <xsl:value-of select="count(PermissionSet/recordTypeVisibilities)" /> </th>
                       </tr>
                       <xsl:apply-templates select="PermissionSet/recordTypeVisibilities" />
                   </table>
@@ -235,6 +246,7 @@
                          <tr>
                              <th>name</th>
                              <th>enabled</th>
+                             <th> <xsl:value-of select="count(PermissionSet/customMetadataTypeAccesses)" /> </th>
                          </tr>
                          <xsl:apply-templates select="PermissionSet/customMetadataTypeAccesses" />
                      </table>
@@ -249,6 +261,7 @@
                          <tr>
                              <th>name</th>
                              <th>enabled</th>
+                             <th> <xsl:value-of select="count(PermissionSet/customSettingAccesses)" /> </th>
                          </tr>
                          <xsl:apply-templates select="PermissionSet/customSettingAccesses" />
                      </table>
@@ -262,6 +275,7 @@
                         <tr>
                             <th>name</th>
                             <th>enabled</th>
+                            <th> <xsl:value-of select="count(PermissionSet/customPermissions)" /> </th>
                         </tr>
                         <xsl:apply-templates select="PermissionSet/customPermissions" />
                     </table>
@@ -274,7 +288,8 @@
                            class="table table-light table-bordered table-striped table-hover">
                            <tr>
                                <th>apexPage</th>
-                               <th>enabled</th>
+                               <th>enabled </th>
+                               <th> <xsl:value-of select="count(PermissionSet/pageAccesses)" /> </th>
                            </tr>
                            <xsl:apply-templates select="PermissionSet/pageAccesses" />
                        </table>

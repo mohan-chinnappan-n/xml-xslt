@@ -9,7 +9,7 @@ sfdx force:mdapi:retrieve -k  profiles-with-stdobjects-package.xml -u <username>
 
 -->
 <types>
-    <!-- needs to customizable CustomObjects -->
+    <!-- needs to be customizable CustomObjects -->
 	<members>Account</members>
 	<members>Contact</members>
 	<members>Opportunity</members>

@@ -214,7 +214,6 @@
                         <th>viewAllRecords</th>
                         <th>modifyAllRecords</th>
                         <th> <xsl:value-of select="count(PermissionSet/userPermissions)" />
-                        
                         </th>
                     </tr>
                     <xsl:apply-templates select="PermissionSet/userPermissions" />

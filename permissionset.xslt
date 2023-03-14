@@ -75,6 +75,18 @@
                         <a href="#customMetadataTypeAccesses">customMetadataTypeAccesses</a>
                     </li>
 
+                    <li class='list-group-item'>
+                        <a href="#customSettingAccesses">customSettingAccesses</a>
+                    </li>
+
+                    <li class='list-group-item'>
+                        <a href="#customPermissions">customPermissions</a>
+                    </li>
+
+                    <li class='list-group-item'>
+                        <a href="#pageAccesses">pageAccesses</a>
+                    </li>
+
 
                 </ul>
 
@@ -226,6 +238,48 @@
                          </tr>
                          <xsl:apply-templates select="PermissionSet/customMetadataTypeAccesses" />
                      </table>
+
+                     
+                     <!-- customSettingAccesses -->
+                     <a name="customSettingAccesses"></a>
+                     <h3>customSettingAccesses</h3>
+                     <table
+                         style='width:640px;'
+                         class="table table-light table-bordered table-striped table-hover">
+                         <tr>
+                             <th>name</th>
+                             <th>enabled</th>
+                         </tr>
+                         <xsl:apply-templates select="PermissionSet/customSettingAccesses" />
+                     </table>
+
+                    <!-- customPermissions -->
+                    <a name="customPermissions"></a>
+                    <h3>customPermissions</h3>
+                    <table
+                        style='width:640px;'
+                        class="table table-light table-bordered table-striped table-hover">
+                        <tr>
+                            <th>name</th>
+                            <th>enabled</th>
+                        </tr>
+                        <xsl:apply-templates select="PermissionSet/customPermissions" />
+                    </table>
+
+                       <!-- pageAccesses -->
+                       <a name="pageAccesses"></a>
+                       <h3>pageAccesses</h3>
+                       <table
+                           style='width:640px;'
+                           class="table table-light table-bordered table-striped table-hover">
+                           <tr>
+                               <th>apexPage</th>
+                               <th>enabled</th>
+                           </tr>
+                           <xsl:apply-templates select="PermissionSet/pageAccesses" />
+                       </table>
+
+
    
 
                 </div>
@@ -366,6 +420,37 @@
             </tr>
         </xsl:for-each>
     </xsl:template>
+
+
+    <xsl:template match="customSettingAccesses">
+        <xsl:for-each select=".">
+            <tr>
+                <td> <xsl:value-of select="name" /> </td>
+                <td> <xsl:value-of select="enabled  " /> </td>
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
+
+
+    <xsl:template match="customPermissions">
+        <xsl:for-each select=".">
+            <tr>
+                <td> <xsl:value-of select="name" /> </td>
+                <td> <xsl:value-of select="enabled  " /> </td>
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
+
+
+    <xsl:template match="pageAccesses">
+        <xsl:for-each select=".">
+            <tr>
+                <td> <xsl:value-of select="apexPage" /> </td>
+                <td> <xsl:value-of select="enabled  " /> </td>
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
+
 
 
 

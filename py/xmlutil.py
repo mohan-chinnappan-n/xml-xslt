@@ -31,10 +31,10 @@ class XMLUtil(object):
         try:
             # Load the XSLT stylesheet
 
-            xsl_url = f"https://raw.githubusercontent.com/mohan-chinnappan-n/xml-xslt/main/{self.xsl}.xslt"
+            xsl_url = f"https://raw.githubusercontent.com/mohan-chinnappan-n/xml-xslt/main/{self.xsl.lower()}.xslt"
             xsl_content = requests.get(xsl_url)
 
-            xslt_doc = etree.fromstring(xsl_content.encode())
+            xslt_doc = etree.fromstring(xsl_content.text.encode())
             xslt_transformer = etree.XSLT(xslt_doc)
 
             # Load the XML input document

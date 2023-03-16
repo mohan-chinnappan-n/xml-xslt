@@ -414,6 +414,9 @@
                 <td>
                     <xsl:value-of select="sf:layout" />
                 </td>
+                <td>
+                    <xsl:value-of select="sf:recordType" />
+                </td>
             </tr>
         </xsl:for-each>
     </xsl:template>

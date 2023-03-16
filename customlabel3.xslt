@@ -3,7 +3,7 @@
 <xsl:output method="text" encoding="iso-8859-1"/>
 <!-- Author: mchinnappan -->
 <!--
-    Renders PSV version for the given CustomLabel
+    Renders TSV version for the given CustomLabel
 -->
 <xsl:template match="/">
     <xsl:text>fullName&#x9;value&#x9;shortDescription&#x9;categories&#x9;language&#x9;protected</xsl:text>

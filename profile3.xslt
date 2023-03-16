@@ -121,7 +121,9 @@
                             / <xsl:value-of select="count(sf:Profile/sf:applicationVisibilities[not(.=preceding::*)])" />
                         </th>
                     </tr>
-                    <xsl:apply-templates select="sf:Profile/sf:applicationVisibilities" />
+                    <xsl:apply-templates select="sf:Profile/sf:applicationVisibilities" >
+                    <xsl:sort select="sf:application"/>
+                     </xsl:apply-templates>
                 </table>
 
 
@@ -138,7 +140,9 @@
                             / <xsl:value-of select="count(sf:Profile/sf:tabSettings[not(.=preceding::*)])" />
                         </th>
                     </tr>
-                    <xsl:apply-templates select="sf:Profile/sf:tabSettings" />
+                    <xsl:apply-templates select="sf:Profile/sf:tabSettings" >
+                       <xsl:sort select="sf:tab"/>
+                    </xsl:apply-templates>
                 </table>
 
 
@@ -175,7 +179,9 @@
                             / <xsl:value-of select="count(sf:Profile/sf:classAccesses[not(.=preceding::*)])" />
                         </th>
                     </tr>
-                    <xsl:apply-templates select="sf:Profile/sf:classAccesses" />
+                    <xsl:apply-templates select="sf:Profile/sf:classAccesses" >
+                       <xsl:sort select="sf:apexClass"/>
+                     </xsl:apply-templates>
                 </table>
 
                 <!-- layoutAssignments -->
@@ -190,7 +196,11 @@
                             / <xsl:value-of select="count(sf:Profile/sf:layoutAssignments[not(.=preceding::*)])" />
                         </th>
                     </tr>
-                    <xsl:apply-templates select="sf:Profile/sf:layoutAssignments" />
+                    <xsl:apply-templates select="sf:Profile/sf:layoutAssignments" >
+                    <xsl:sort select="sf:layout"/>
+                </xsl:apply-templates>
+
+
                 </table>
 
                 <!-- fieldPermissions -->
@@ -207,7 +217,11 @@
                             / <xsl:value-of select="count(sf:Profile/sf:fieldPermissions[not(.=preceding::*)])" />
                         </th>
                     </tr>
-                    <xsl:apply-templates select="sf:Profile/sf:fieldPermissions" />
+                    <xsl:apply-templates select="sf:Profile/sf:fieldPermissions" >
+                        <xsl:sort select="sf:field"/>
+                    </xsl:apply-templates>
+
+
                 </table>
 
 
@@ -229,7 +243,10 @@
                             / <xsl:value-of select="count(sf:Profile/sf:objectPermissions[not(.=preceding::*)])" />
                         </th>
                     </tr>
-                    <xsl:apply-templates select="sf:Profile/sf:objectPermissions" />
+                    <xsl:apply-templates select="sf:Profile/sf:objectPermissions" >
+                         <xsl:sort select="sf:object"/>
+                     </xsl:apply-templates>
+
                 </table>
 
 
@@ -247,7 +264,9 @@
                            
                         </th>
                     </tr>
-                    <xsl:apply-templates select="sf:Profile/sf:userPermissions" />
+                    <xsl:apply-templates select="sf:Profile/sf:userPermissions" >
+                          <xsl:sort select="sf:name"/>
+                     </xsl:apply-templates>
                 </table>
 
 
@@ -264,7 +283,9 @@
                             / <xsl:value-of select="count(sf:Profile/sf:recordTypeVisibilities[not(.=preceding::*)])" />
                         </th>
                       </tr>
-                      <xsl:apply-templates select="sf:Profile/sf:recordTypeVisibilities" />
+                      <xsl:apply-templates select="sf:Profile/sf:recordTypeVisibilities" >
+                        <xsl:sort select="sf:recordType"/>
+                      </xsl:apply-templates>
                   </table>
 
 
@@ -283,7 +304,11 @@
                                 / <xsl:value-of select="count(sf:Profile/sf:customMetadataTypeAccesses[not(.=preceding::*)])" />
                             </th>
                          </tr>
-                         <xsl:apply-templates select="sf:Profile/sf:customMetadataTypeAccesses" />
+                         <xsl:apply-templates select="sf:Profile/sf:customMetadataTypeAccesses" >
+                            <xsl:sort select="sf:name"/>
+                        </xsl:apply-templates>
+
+
                      </table>
 
                      
@@ -300,7 +325,9 @@
                                 / <xsl:value-of select="count(sf:Profile/sf:customSettingAccesses[not(.=preceding::*)])" />
                             </th>
                          </tr>
-                         <xsl:apply-templates select="sf:Profile/sf:customSettingAccesses" />
+                         <xsl:apply-templates select="sf:Profile/sf:customSettingAccesses" >
+                             <xsl:sort select="sf:name"/>
+                         </xsl:apply-templates>
                      </table>
 
                     <!-- customPermissions -->
@@ -316,7 +343,9 @@
                                 / <xsl:value-of select="count(sf:Profile/sf:customPermissions[not(.=preceding::*)])" />
                             </th>
                         </tr>
-                        <xsl:apply-templates select="sf:Profile/sf:customPermissions" />
+                        <xsl:apply-templates select="sf:Profile/sf:customPermissions" >
+                            <xsl:sort select="sf:name"/>
+                        </xsl:apply-templates>
                     </table>
 
                        <!-- pageAccesses -->
@@ -333,7 +362,11 @@
 
                              </th>
                            </tr>
-                           <xsl:apply-templates select="sf:Profile/sf:pageAccesses" />
+                           <xsl:apply-templates select="sf:Profile/sf:pageAccesses" >
+                                  <xsl:sort select="sf:apexPage"/>
+                          </xsl:apply-templates>
+
+
                        </table>
 
 

@@ -61,7 +61,7 @@ xmlns:sf="http://soap.sforce.com/2006/04/metadata"
    </tbody>
   </table>
 </div>
-</xsl:template>
+
 
 
 <script>
@@ -78,6 +78,8 @@ xmlns:sf="http://soap.sforce.com/2006/04/metadata"
      
   </body>
   </html>
+</xsl:template>
+
 
 
      <!-- templates -->

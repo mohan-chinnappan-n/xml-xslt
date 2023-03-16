@@ -57,11 +57,7 @@ xmlns:sf="http://soap.sforce.com/2006/04/metadata"
     </thead>
 
     <tbody>
-
-
-      <xsl:apply-templates select="sf:CustomLabels/sf:labels" >
-      </xsl:apply-templates>
-
+      <xsl:apply-templates select="sf:CustomLabels/sf:labels" />
   </tbody>
   </table>
 </div>
@@ -80,7 +76,7 @@ xmlns:sf="http://soap.sforce.com/2006/04/metadata"
              <td><xsl:value-of select="sf:protected"/></td>
       </tr>
     </xsl:for-each>
-    <xsl:template>
+  </xsl:template>
 
 
   <script>

@@ -93,5 +93,4 @@ $(document).ready( function () {
    
 </body>
 </html>
-</xsl:template>
 </xsl:stylesheet>

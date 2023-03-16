@@ -30,7 +30,7 @@
                             </li>
                             <li class="nav-item active">
                                 <a class="nav-link" href="#">
-                                    <xsl:value-of select="sf:Profile/sf:fullName" />
+                                    <xsl:value-of select="sf:Profile/sf:fullName    " />
                                 </a>
                             </li>
                         </ul>
@@ -450,6 +450,8 @@
 
     <xsl:template match="sf:tabVisibilities">
         <xsl:for-each select=".">
+            <xsl:sort select="sf:tab"/>
+
             <tr>
                 <td> <xsl:value-of select="sf:tab" /> </td>
                 <td> <xsl:value-of select="sf:visibility" /> </td>

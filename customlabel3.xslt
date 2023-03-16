@@ -7,7 +7,7 @@
 <xsl:template match="/">
     <xsl:text>fullName|value|shortDescription|categories|language|protected</xsl:text>
     <xsl:for-each select="sf:CustomLabels/sf:labels">
-            <xsl:value-of select="concat(fullName,'|',value,'|',shortDescription,'|',categories,'|',language,'|',protected,'&#xA;')"/>
+            <xsl:value-of select="concat(sf:fullName,'|',sf:value,'|',sf:shortDescription,'|',sf:categories,'|',sf:language,'|',sf:protected,'&#xA;')"/>
     </xsl:for-each>
 </xsl:template>
 

@@ -30,7 +30,7 @@
                             </li>
                             <li class="nav-item active">
                                 <a class="nav-link" href="#">
-                                    <xsl:value-of select="sf:PermissionSet/sf:fullName    " />
+                                    <xsl:value-of select="sf:PermissionSet/sf:label    " />
                                 </a>
                             </li>
                         </ul>

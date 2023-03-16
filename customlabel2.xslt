@@ -62,6 +62,10 @@ xmlns:sf="http://soap.sforce.com/2006/04/metadata"
       <xsl:apply-templates select="sf:CustomLabels/sf:labels" >
       </xsl:apply-templates>
 
+  </tbody>
+  </table>
+</div>
+
 
      <!-- templates -->
      <xsl:template match="sf:CustomLabels/sf:labels">
@@ -78,10 +82,6 @@ xmlns:sf="http://soap.sforce.com/2006/04/metadata"
     </xsl:for-each>
     <xsl:template>
 
-    
-  </tbody>
-  </table>
-</div>
 
   <script>
 $(document).ready( function () {

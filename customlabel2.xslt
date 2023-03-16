@@ -58,9 +58,26 @@ xmlns:sf="http://soap.sforce.com/2006/04/metadata"
 
     <tbody>
       <xsl:apply-templates select="sf:CustomLabels/sf:labels" />
-  </tbody>
+   </tbody>
   </table>
 </div>
+</xsl:template>
+
+
+<script>
+  $(document).ready( function () {
+      $('#data_table').DataTable({
+        dom: 'Blfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+      }
+      );
+  } );
+  </script>
+     
+  </body>
+  </html>
 
 
      <!-- templates -->
@@ -79,18 +96,5 @@ xmlns:sf="http://soap.sforce.com/2006/04/metadata"
   </xsl:template>
 
 
-  <script>
-$(document).ready( function () {
-    $('#data_table').DataTable({
-      dom: 'Blfrtip',
-      buttons: [
-          'copy', 'csv', 'excel', 'pdf', 'print'
-      ]
-    }
-    );
-} );
-</script>
-   
-</body>
-</html>
+
 </xsl:stylesheet>

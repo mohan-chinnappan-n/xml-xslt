@@ -192,9 +192,11 @@
                     class="table table-light table-bordered table-striped table-hover">
                     <tr>
                         <th>layout</th>
+                        <th>recordType</th>
                         <th> <xsl:value-of select="count(sf:Profile/sf:layoutAssignments)" />
                             / <xsl:value-of select="count(sf:Profile/sf:layoutAssignments[not(.=preceding::*)])" />
                         </th>
+                      
                     </tr>
                     <xsl:apply-templates select="sf:Profile/sf:layoutAssignments" >
                     <xsl:sort select="sf:layout"/>

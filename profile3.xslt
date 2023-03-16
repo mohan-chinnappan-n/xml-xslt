@@ -155,7 +155,10 @@
                             / <xsl:value-of select="count(sf:Profile/sf:tabVisibilities[not(.=preceding::*)])" />
                         </th>
                     </tr>
-                    <xsl:apply-templates select="sf:Profile/sf:tabVisibilities" />
+                    <xsl:apply-templates select="sf:Profile/sf:tabVisibilities" >
+                       <xsl:sort select="sf:tab"/>
+                     </xsl:apply-templates>
+
                 </table>
 
 
@@ -450,7 +453,6 @@
 
     <xsl:template match="sf:tabVisibilities">
         <xsl:for-each select=".">
-            <xsl:sort select="sf:tab"/>
 
             <tr>
                 <td> <xsl:value-of select="sf:tab" /> </td>

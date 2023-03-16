@@ -59,7 +59,6 @@ xmlns:sf="http://soap.sforce.com/2006/04/metadata"
 
     <tbody>
       <xsl:apply-templates select="sf:CustomLabels/sf:labels" >
-       <xsl:sort select="sf:value"/>
       </xsl:apply-templates>
    </tbody>
   </table>

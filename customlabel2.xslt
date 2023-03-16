@@ -2,7 +2,6 @@
 <xsl:stylesheet version="1.0"
 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 xmlns:sf="http://soap.sforce.com/2006/04/metadata"     
-
 >
 
 <xsl:output method="html" />
@@ -78,6 +77,7 @@ xmlns:sf="http://soap.sforce.com/2006/04/metadata"
              <td><xsl:value-of select="sf:protected"/></td>
       </tr>
     </xsl:for-each>
+    <xsl:template>
   </tbody>
   </table>
 </div>

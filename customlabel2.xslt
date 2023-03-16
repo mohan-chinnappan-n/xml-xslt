@@ -58,9 +58,17 @@ xmlns:sf="http://soap.sforce.com/2006/04/metadata"
     </thead>
 
     <tbody>
-    <xsl:for-each select="sf:CustomLabels/sf:labels">
-    <tr>
-        <xsl:for-each select="."> 
+
+
+      <xsl:apply-templates select="sf:CustomLabels/sf:labels" >
+
+      </xsl:apply-templates>
+
+
+     <!-- templates -->
+     <xsl:template match="sf:CustomLabels/sf:labels">
+      <xsl:for-each select=".">
+      <tr>
              <td><xsl:value-of select="sf:fullName"/></td>
              <td><xsl:value-of select="sf:value"/></td>
              <td><xsl:value-of select="sf:shortDescription"/></td>
@@ -68,8 +76,6 @@ xmlns:sf="http://soap.sforce.com/2006/04/metadata"
              <td><xsl:value-of select="sf:categories"/></td>
              <td><xsl:value-of select="sf:language"/></td>
              <td><xsl:value-of select="sf:protected"/></td>
-             
-        </xsl:for-each>
       </tr>
     </xsl:for-each>
   </tbody>

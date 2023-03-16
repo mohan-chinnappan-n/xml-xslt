@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+xmlns:sf="http://soap.sforce.com/2006/04/metadata"     
+
+>
 
 <xsl:output method="html" />
 
@@ -55,16 +58,16 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     </thead>
 
     <tbody>
-    <xsl:for-each select="CustomLabels/labels">
+    <xsl:for-each select="sf:CustomLabels/sf:labels">
     <tr>
         <xsl:for-each select="."> 
-             <td><xsl:value-of select="fullName"/></td>
-             <td><xsl:value-of select="value"/></td>
-             <td><xsl:value-of select="shortDescription"/></td>
+             <td><xsl:value-of select="sf:fullName"/></td>
+             <td><xsl:value-of select="sf:value"/></td>
+             <td><xsl:value-of select="sf:shortDescription"/></td>
 
-             <td><xsl:value-of select="categories"/></td>
-             <td><xsl:value-of select="language"/></td>
-             <td><xsl:value-of select="protected"/></td>
+             <td><xsl:value-of select="sf:categories"/></td>
+             <td><xsl:value-of select="sf:language"/></td>
+             <td><xsl:value-of select="sf:protected"/></td>
              
         </xsl:for-each>
       </tr>

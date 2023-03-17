@@ -1,0 +1,2 @@
+pyinstaller --onefile xmlutil.py
+

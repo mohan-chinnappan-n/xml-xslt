@@ -5,6 +5,7 @@
 <!--
     Renders TSV version for the given CustomLabel
 -->
+
 <xsl:template match="/">
     <xsl:text>fullName&#x9;value&#x9;shortDescription&#x9;categories&#x9;language&#x9;protected</xsl:text>
     <xsl:text>&#10;</xsl:text>

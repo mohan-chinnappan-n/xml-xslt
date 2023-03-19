@@ -61,7 +61,7 @@
         </tr>
       </table>
       <hr/>
-      <a class='btn btn-info' href='https://pmd.github.io/latest/pmd_userdocs_cpd.html#refactoring-duplicates'>Refactoring duplicates</a>
+      <a class='btn btn-info' href='https://pmd.github.io/latest/pmd_userdocs_cpd.html#refactoring-duplicates'>About Refactoring Duplicates</a>
       <h4>Details of duplicated code</h4>
 
       <table style="width:640px" id='data_table' class="table table-light table-bordered table-striped table-hover">
@@ -123,7 +123,6 @@
                 <td><xsl:value-of select="@line"/></td>
                 <td><xsl:value-of select="@endline"/></td>
                 <td><xsl:value-of select="@path"/></td>
-
               </tr>
             </xsl:for-each>
           </table>

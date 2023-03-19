@@ -60,6 +60,8 @@
           <td class="SummaryNumber"><xsl:value-of select="sum(//duplication/@tokens) * 4"/></td>
         </tr>
       </table>
+      <hr/>
+      <a href='https://pmd.github.io/latest/pmd_userdocs_cpd.html#refactoring-duplicates'>Refactoring duplicates</a>
       <h4>Details of duplicated code</h4>
 
       

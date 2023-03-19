@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
 <!--
-  
    PMD CPD (Copy and Paste Detector) XML to HTML transformer 
-  Author: mchinnappan -->
+   Author: mchinnappan 
+-->
 <xsl:output method="html" />
 
 <xsl:template match="/">
@@ -38,12 +38,12 @@
           </li>
         </ul>
       </div>
-    </nav>
+  </nav>
 
 
     <div class='container'>
       <h4>Summary of duplicated code</h4>
-    <p>This page summarizes the code fragments that have been found to be replicated in the code.</p>
+      <p>This page summarizes the code fragments that have been found to be replicated in the code.</p>
     
 
       <table style="width:640px" id='data_table0' class="table table-light table-bordered table-striped table-hover">
@@ -61,12 +61,10 @@
         </tr>
       </table>
       <hr/>
-      <a href='https://pmd.github.io/latest/pmd_userdocs_cpd.html#refactoring-duplicates'>Refactoring duplicates</a>
+      <a class='btn btn-info' href='https://pmd.github.io/latest/pmd_userdocs_cpd.html#refactoring-duplicates'>Refactoring duplicates</a>
       <h4>Details of duplicated code</h4>
 
-      
-  
-        <table style="width:640px" id='data_table' class="table table-light table-bordered table-striped table-hover">
+      <table style="width:640px" id='data_table' class="table table-light table-bordered table-striped table-hover">
           <thead>
             <tr>
               <th>lines</th>
@@ -75,12 +73,11 @@
               <th>codefragment</th>
             </tr>
           </thead>
-      
           <tbody>
             <xsl:apply-templates select="pmd-cpd/duplication" />
-         </tbody>
-        </table>
-      </div>
+          </tbody>
+      </table>
+    </div>
 
 
 <script>
@@ -104,18 +101,19 @@
     } );
   }
   
-  </script>
+</script>
+
 </body>
 </html>
 </xsl:template>
 
-  <!-- templates -->
-  <xsl:template match="pmd-cpd/duplication">
+<!-- templates -->
+<xsl:template match="pmd-cpd/duplication">
   <xsl:for-each select=".">
-  <tr>
-         <td><xsl:value-of select="@lines"/></td>
-         <td><xsl:value-of select="@tokens"/></td>
-         <td>
+      <tr>
+        <td><xsl:value-of select="@lines"/></td>
+        <td><xsl:value-of select="@tokens"/></td>
+        <td>
           <table style="width:640px" id='data_table2' class="table table-light table-bordered table-striped table-hover">
             <tr><th>column</th><th>endcolumn</th><th>line</th><th>endline</th><th>path</th></tr>
             <xsl:for-each select="file">
@@ -131,12 +129,8 @@
           </table>
         </td>
         <td><pre><xsl:value-of select="codefragment"/></pre></td>
-  </tr>
-</xsl:for-each>
+      </tr>
+  </xsl:for-each>
 </xsl:template>
-
-
-
-
   
 </xsl:stylesheet>

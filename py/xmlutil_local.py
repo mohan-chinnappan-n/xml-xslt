@@ -31,15 +31,9 @@ class XMLUtil(object):
         try:
             # Load the XSLT stylesheet
 
-            xsl_url = f"https://raw.githubusercontent.com/mohan-chinnappan-n/xml-xslt/main/{self.xsl.lower()}.xslt"
-            xsl_content = requests.get(xsl_url)
-            if xsl_content.status_code == 404:
-                 print (f"{xsl_url} not available!")
-                 exit(2)
-                 
-
-            xslt_doc = etree.fromstring(xsl_content.text.encode())
-            xslt_transformer = etree.XSLT(xslt_doc)
+            # try to read the local file
+            xsl_content = etree.parse(self.xsl) 
+            xslt_transformer = etree.XSLT(xsl_content)
 
             # Load the XML input document
             input_doc = etree.parse(self.xml)

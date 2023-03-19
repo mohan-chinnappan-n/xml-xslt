@@ -60,6 +60,7 @@
           <td class="SummaryNumber"><xsl:value-of select="sum(//duplication[@lines>30]/@tokens) * 4"/></td>
         </tr>
       </table>
+      <h4>Details of duplicated code</h4>
 
       
   

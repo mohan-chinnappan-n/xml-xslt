@@ -43,8 +43,8 @@
 
     <div class='container'>
       <h4>Summary of duplicated code</h4>
-    <p>This page summarizes the code fragments that have been found to be replicated in the code.
-    Only those fragments longer than 30 lines of code are shown.</p>
+    <p>This page summarizes the code fragments that have been found to be replicated in the code.</p>
+    
 
       <table style="width:640px" id='data_table0' class="table table-light table-bordered table-striped table-hover">
         <tr>
@@ -54,10 +54,10 @@
           <th>Approximate number of bytes</th>
         </tr>
         <tr>
-          <td class="SummaryNumber"><xsl:value-of select="count(//duplication[@lines>30])"/></td>
-          <td class="SummaryNumber"><xsl:value-of select="sum(//duplication[@lines>30]/@lines)"/></td>
-          <td class="SummaryNumber"><xsl:value-of select="sum(//duplication[@lines>30]/@tokens)"/></td>
-          <td class="SummaryNumber"><xsl:value-of select="sum(//duplication[@lines>30]/@tokens) * 4"/></td>
+          <td class="SummaryNumber"><xsl:value-of select="count(//duplication)"/></td>
+          <td class="SummaryNumber"><xsl:value-of select="sum(//duplication/@lines)"/></td>
+          <td class="SummaryNumber"><xsl:value-of select="sum(//duplication/@tokens)"/></td>
+          <td class="SummaryNumber"><xsl:value-of select="sum(//duplication/@tokens) * 4"/></td>
         </tr>
       </table>
       <h4>Details of duplicated code</h4>

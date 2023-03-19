@@ -67,7 +67,6 @@
         <table style="width:640px" id='data_table' class="table table-light table-bordered table-striped table-hover">
           <thead>
             <tr>
-              <th>Id</th>
               <th>lines</th>
               <th>tokens</th>
               <th>files</th>
@@ -112,7 +111,6 @@
   <xsl:template match="pmd-cpd/duplication">
   <xsl:for-each select=".">
   <tr>
-         <td><xsl:value-of select="position()"/></td>
          <td><xsl:value-of select="@lines"/></td>
          <td><xsl:value-of select="@tokens"/></td>
          <td>

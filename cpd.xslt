@@ -42,6 +42,23 @@
 
 
     <div class='container'>
+
+      <table style="width:640px" id='data_table0' class="table table-light table-bordered table-striped table-hover">
+        <tr>
+          <th># duplications</th>
+          <th>Total lines</th>
+          <th>Total tokens</th>
+          <th>Approx # bytes</th>
+        </tr>
+        <tr>
+          <td class="SummaryNumber"><xsl:value-of select="count(//duplication[@lines>30])"/></td>
+          <td class="SummaryNumber"><xsl:value-of select="sum(//duplication[@lines>30]/@lines)"/></td>
+          <td class="SummaryNumber"><xsl:value-of select="sum(//duplication[@lines>30]/@tokens)"/></td>
+          <td class="SummaryNumber"><xsl:value-of select="sum(//duplication[@lines>30]/@tokens) * 4"/></td>
+        </tr>
+      </table>
+
+      
   
         <table style="width:640px" id='data_table' class="table table-light table-bordered table-striped table-hover">
           <thead>

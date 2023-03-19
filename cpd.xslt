@@ -42,13 +42,16 @@
 
 
     <div class='container'>
+      <h4>Summary of duplicated code</h4>
+    <p>This page summarizes the code fragments that have been found to be replicated in the code.
+    Only those fragments longer than 30 lines of code are shown.</p>
 
       <table style="width:640px" id='data_table0' class="table table-light table-bordered table-striped table-hover">
         <tr>
-          <th># duplications</th>
+          <th># Duplications</th>
           <th>Total lines</th>
           <th>Total tokens</th>
-          <th>Approx # bytes</th>
+          <th>Approximate number of bytes</th>
         </tr>
         <tr>
           <td class="SummaryNumber"><xsl:value-of select="count(//duplication[@lines>30])"/></td>

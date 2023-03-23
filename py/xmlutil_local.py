@@ -2,7 +2,6 @@
 
 from lxml import etree
 import fire
-import requests
 
 
 """

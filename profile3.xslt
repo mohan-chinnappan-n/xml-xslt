@@ -104,6 +104,12 @@
                     </li>
 
 
+                    <li class='list-group-item'>
+                        <a href="#flowAccesses">flowAccesses</a>
+                    </li>
+
+
+
                 </ul>
 
                 <!-- applicationVisibilities -->
@@ -371,6 +377,28 @@
 
                        </table>
 
+                       <!-- flowAccesses -->
+                       <a name="flowAccesses"></a>
+                       <h3>flowAccesses</h3>
+                       <table
+                           style='width:640px;'
+                           class="table table-light table-bordered table-striped table-hover">
+                           <tr>
+                               <th>flow</th>
+                               <th>enabled </th>
+                               <th> <xsl:value-of select="count(sf:Profile/sf:flowAccesses)" />
+                                / <xsl:value-of select="count(sf:Profile/sf:flowAccesses[not(.=preceding::*)])" />
+
+                             </th>
+                           </tr>
+                           <xsl:apply-templates select="sf:Profile/sf:flowAccesses" >
+                                  <xsl:sort select="sf:flow"/>
+                          </xsl:apply-templates>
+
+
+                       </table>
+
+
 
    
 
@@ -530,6 +558,15 @@
 
 
     <xsl:template match="sf:customPermissions">
+        <xsl:for-each select=".">
+            <tr>
+                <td> <xsl:value-of select="sf:name" /> </td>
+                <td> <xsl:value-of select="sf:enabled  " /> </td>
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
+
+    <xsl:template match="sf:flowAccess">
         <xsl:for-each select=".">
             <tr>
                 <td> <xsl:value-of select="sf:name" /> </td>

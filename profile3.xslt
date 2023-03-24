@@ -540,7 +540,7 @@
         <xsl:for-each select=".">
             <tr>
                 <td> <xsl:value-of select="sf:name" /> </td>
-                <td> <xsl:value-of select="sf:enabled  " /> </td>
+                <td> <xsl:value-of select="sf:enabled" /> </td>
             </tr>
         </xsl:for-each>
     </xsl:template>
@@ -550,7 +550,7 @@
         <xsl:for-each select=".">
             <tr>
                 <td> <xsl:value-of select="sf:name" /> </td>
-                <td> <xsl:value-of select="sf:enabled  " /> </td>
+                <td> <xsl:value-of select="sf:enabled" /> </td>
             </tr>
         </xsl:for-each>
     </xsl:template>
@@ -560,7 +560,7 @@
         <xsl:for-each select=".">
             <tr>
                 <td> <xsl:value-of select="sf:name" /> </td>
-                <td> <xsl:value-of select="sf:enabled  " /> </td>
+                <td> <xsl:value-of select="sf:enabled" /> </td>
             </tr>
         </xsl:for-each>
     </xsl:template>
@@ -569,7 +569,7 @@
         <xsl:for-each select=".">
             <tr>
                 <td> <xsl:value-of select="sf:name" /> </td>
-                <td> <xsl:value-of select="sf:enabled  " /> </td>
+                <td> <xsl:value-of select="sf:enabled" /> </td>
             </tr>
         </xsl:for-each>
     </xsl:template>
@@ -579,7 +579,7 @@
         <xsl:for-each select=".">
             <tr>
                 <td> <xsl:value-of select="sf:apexPage" /> </td>
-                <td> <xsl:value-of select="sf:enabled  " /> </td>
+                <td> <xsl:value-of select="sf:enabled" /> </td>
             </tr>
         </xsl:for-each>
     </xsl:template>

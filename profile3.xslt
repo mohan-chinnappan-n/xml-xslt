@@ -568,7 +568,7 @@
     <xsl:template match="sf:flowAccesses">
         <xsl:for-each select=".">
             <tr>
-                <td> <xsl:value-of select="sf:name" /> </td>
+                <td> <xsl:value-of select="sf:flow" /> </td>
                 <td> <xsl:value-of select="sf:enabled" /> </td>
             </tr>
         </xsl:for-each>

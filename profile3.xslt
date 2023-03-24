@@ -395,7 +395,6 @@
                                   <xsl:sort select="sf:flow"/>
                           </xsl:apply-templates>
 
-
                        </table>
 
 

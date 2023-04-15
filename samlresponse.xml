@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<samlp:Response
+    xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"
+    xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+    ID="abcdefg"
+    Version="2.0"
+    IssueInstant="2023-03-26T12:34:56Z"
+    Destination="https://sp.example.com/acs"
+    InResponseTo="12345">
+    <saml:Issuer>https://idp.example.com</saml:Issuer>
+    <samlp:Status>
+        <samlp:StatusCode
+            Value="urn:oasis:names:tc:SAML:2.0:status:Success" />
+    </samlp:Status>
+    <saml:Assertion
+        ID="hijklmn"
+        Version="2.0"
+        IssueInstant="2023-03-26T12:34:56Z">
+        <saml:Issuer>https://idp.example.com</saml:Issuer>
+        <saml:Subject>
+            <saml:NameID>user@example.com</saml:NameID>
+            <saml:SubjectConfirmation
+                Method="urn:oasis:names:tc:SAML:2.0:cm:bearer">
+                <saml:SubjectConfirmationData
+                    InResponseTo="12345"
+                    NotOnOrAfter="2023-03-26T12:44:56Z"
+                    Recipient="https://sp.example.com/acs" />
+            </saml:SubjectConfirmation>
+        </saml:Subject>
+        <saml:Conditions
+            NotBefore="2023-03-26T12:24:56Z"
+            NotOnOrAfter="2023-03-26T12:44:56Z">
+            <saml:AudienceRestriction>
+                <saml:Audience>https://sp.example.com</saml:Audience>
+            </saml:AudienceRestriction>
+        </saml:Conditions>
+        <saml:AuthnStatement
+            AuthnInstant="2023-03-26T12:34:56Z"
+            SessionIndex="12345">
+            <saml:AuthnContext>
+                <saml:AuthnContextClassRef>
+                    urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport
+                </saml:AuthnContextClassRef>
+            </saml:AuthnContext>
+        </saml:AuthnStatement>
+    </saml:Assertion>
+</samlp:Response>
+

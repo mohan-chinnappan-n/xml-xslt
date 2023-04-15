@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<samlp:AuthnRequest
+    xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"
+    xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion"
+    ID="12345"
+    Version="2.0"
+    IssueInstant="2023-03-26T12:34:56Z"
+    ProtocolBinding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+    AssertionConsumerServiceURL="https://sp.example.com/acs"
+    Destination="https://idp.example.com/idp/login">
+    <saml:Issuer>https://sp.example.com</saml:Issuer>
+    <samlp:NameIDPolicy
+        Format="urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified"
+        AllowCreate="true" />
+</samlp:AuthnRequest>
+
+
+
+
+

@@ -1,0 +1,20 @@
+{
+    "browsers": [
+        "Chrome",
+        "Safari",
+        "Firefox"
+    ],
+    "chrome_is_best": true,
+    "pollution": null,
+    "pi": 3.14,
+    "gems": {
+        "unix": [
+            "ken",
+            "dmr"
+        ],
+        "c": [
+            "dmr"
+        ]
+    },
+    "greeting": "Hello Math!"
+}

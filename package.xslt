@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:sf="http://soap.sforce.com/2006/04/metadata"     
+
+>
 <!-- Author: mchinnappan -->
 <xsl:template match="/">
 <html>
@@ -28,12 +31,12 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
       <th>name</th>
       <th>members</th>
     </tr>
-    <xsl:for-each select="Package/types">
+    <xsl:for-each select="sf:Package/sf:types">
     <tr>
-      <td><xsl:value-of select="name"/></td>
+      <td><xsl:value-of select="sf:name"/></td>
       <td>
         <ul class="list-group list-group-dark">
-        <xsl:for-each select="members"> 
+        <xsl:for-each select="sf:members"> 
           <li class="list-group-item"><xsl:value-of select="."/></li>
         </xsl:for-each>
         </ul>
@@ -46,3 +49,4 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 </html>
 </xsl:template>
 </xsl:stylesheet>
+

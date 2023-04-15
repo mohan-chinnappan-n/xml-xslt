@@ -47,8 +47,8 @@ xmlns:scan="http://pmd.sourceforge.net/report/2.0.0"
   </div>
 </nav>
   <div class='container' style='margin-top:100px;'>
-    <h5>Problems found ::  <small> Version: <xsl:value-of select="$version"/> @ <xsl:value-of select="$timestamp"/></small>
-     <span id="summary"></span>  </h5>
+    <h5>Problems found ::  <small> Version: <xsl:value-of select="$version"/> @ <xsl:value-of select="$timestamp"/></small></h5>
+     <span id="summary"></span>  
     <table id='pmdTable' class='table table-hover table-striped'>
     <thead>
  

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.47.0" timestamp="2023-04-15T10:38:54.746">
+<file name="/Users/mchinnappan/treeprj/force-app/main/default/classes/HelloEarth.cls">
+<violation beginline="1" endline="5" begincolumn="27" endcolumn="1" rule="ApexDoc" ruleset="Documentation" externalInfoUrl="https://pmd.github.io/pmd-6.47.0/pmd_rules_apex_documentation.html#apexdoc" priority="3">
+Missing ApexDoc comment
+</violation>
+<violation beginline="2" endline="2" begincolumn="12" endcolumn="21" rule="EmptyStatementBlock" ruleset="Error Prone" externalInfoUrl="https://pmd.github.io/pmd-6.47.0/pmd_rules_apex_errorprone.html#emptystatementblock" priority="3">
+Avoid empty block statements.
+</violation>
+<violation beginline="2" endline="4" begincolumn="12" endcolumn="5" rule="ApexDoc" ruleset="Documentation" externalInfoUrl="https://pmd.github.io/pmd-6.47.0/pmd_rules_apex_documentation.html#apexdoc" priority="3">
+Missing ApexDoc comment
+</violation>
+</file>
+<file name="/Users/mchinnappan/treeprj/force-app/main/default/classes/HelloMars.cls">
+<violation beginline="1" endline="5" begincolumn="27" endcolumn="1" rule="ApexDoc" ruleset="Documentation" externalInfoUrl="https://pmd.github.io/pmd-6.47.0/pmd_rules_apex_documentation.html#apexdoc" priority="3">
+Missing ApexDoc comment
+</violation>
+<violation beginline="2" endline="2" begincolumn="12" endcolumn="20" rule="EmptyStatementBlock" ruleset="Error Prone" externalInfoUrl="https://pmd.github.io/pmd-6.47.0/pmd_rules_apex_errorprone.html#emptystatementblock" priority="3">
+Avoid empty block statements.
+</violation>
+<violation beginline="2" endline="4" begincolumn="12" endcolumn="5" rule="ApexDoc" ruleset="Documentation" externalInfoUrl="https://pmd.github.io/pmd-6.47.0/pmd_rules_apex_documentation.html#apexdoc" priority="3">
+Missing ApexDoc comment
+</violation>
+</file>
+<file name="/Users/mchinnappan/treeprj/force-app/main/default/classes/HelloPeach.cls">
+<violation beginline="1" endline="5" begincolumn="27" endcolumn="1" rule="ApexDoc" ruleset="Documentation" externalInfoUrl="https://pmd.github.io/pmd-6.47.0/pmd_rules_apex_documentation.html#apexdoc" priority="3">
+Missing ApexDoc comment
+</violation>
+<violation beginline="2" endline="2" begincolumn="12" endcolumn="21" rule="EmptyStatementBlock" ruleset="Error Prone" externalInfoUrl="https://pmd.github.io/pmd-6.47.0/pmd_rules_apex_errorprone.html#emptystatementblock" priority="3">
+Avoid empty block statements.
+</violation>
+<violation beginline="2" endline="4" begincolumn="12" endcolumn="5" rule="ApexDoc" ruleset="Documentation" externalInfoUrl="https://pmd.github.io/pmd-6.47.0/pmd_rules_apex_documentation.html#apexdoc" priority="3">
+Missing ApexDoc comment
+</violation>
+</file>
+</pmd>

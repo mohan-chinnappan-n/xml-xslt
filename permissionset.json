@@ -1,0 +1,55 @@
+{
+    "PermissionSet": {
+        "fullName": "Experience_Profile_Manager",
+        "hasActivationRequired": "false",
+        "label": "Experience Profile Manager",
+        "license": "Salesforce",
+        "userPermissions": [
+            {
+                "enabled": "false",
+                "name": "AccessCMC"
+            },
+            {
+                "enabled": "true",
+                "name": "CreateCustomizeReports"
+            },
+            {
+                "enabled": "true",
+                "name": "CreateReportInLightning"
+            },
+            {
+                "enabled": "true",
+                "name": "EnableCommunityAppLauncher"
+            },
+            {
+                "enabled": "true",
+                "name": "GovernNetworks"
+            },
+            {
+                "enabled": "true",
+                "name": "IsotopeLEX"
+            },
+            {
+                "enabled": "true",
+                "name": "LightningExperienceUser"
+            },
+            {
+                "enabled": "true",
+                "name": "ManageNetworks"
+            },
+            {
+                "enabled": "true",
+                "name": "ModerateNetworkUsers"
+            },
+            {
+                "enabled": "true",
+                "name": "RunReports"
+            },
+            {
+                "enabled": "true",
+                "name": "SandboxTestingInCommunityApp"
+            }
+        ],
+        "_xmlns": "http://soap.sforce.com/2006/04/metadata"
+    }
+}

@@ -91,6 +91,28 @@
                     <xsl:apply-templates select="sf:Flow/sf:start"> </xsl:apply-templates>
                 </table>
 
+                    <!-- screens -->
+                <a name="screens"></a>
+                <h3>screens</h3>
+                <table
+                    style='width:640px;'
+                    class="table table-light table-bordered table-striped table-hover">
+                    <tr>
+                         <th>label</th>
+                        <th>locationX</th>
+                        <th>locationY</th>
+                        <th>allowBack</th>
+                        <th>allowFinish</th>
+                        <th>allowPause</th>
+                        <th>connector</th>
+                        <th>fields</th>
+                        <th>showFooter</th>
+                        <th>showHeader</th>
+ 
+                    </tr>
+                    <xsl:apply-templates select="sf:Flow/sf:screens"> </xsl:apply-templates>
+                </table>
+
 
 
                 <!-- decisions -->
@@ -112,8 +134,140 @@
                     <xsl:apply-templates select="sf:Flow/sf:decisions"> </xsl:apply-templates>
                 </table>
 
+                   <!-- variables -->
+                <a name="variables"></a>
+                <h3>variables</h3>
+                <table
+                    style='width:640px;'
+                    class="table table-light table-bordered table-striped table-hover">
+                    <tr>
+                        <th>name</th>
+                        <th>dataType</th>
+                        <th>isCollection</th>
+                        <th>isInput</th>
+                        <th>isOutput</th>
 
-                 <!-- processMetadataValues -->
+                    </tr>
+                    <xsl:apply-templates select="sf:Flow/sf:variables"> </xsl:apply-templates>
+                </table>
+
+
+
+                 <!-- formulas -->
+                <a name="formulas"></a>
+                <h3>formulas</h3>
+                <table
+                    style='width:640px;'
+                    class="table table-light table-bordered table-striped table-hover">
+                    <tr>
+                        <th>name</th>
+                        <th>dataType</th>
+                        <th>expression</th>
+
+                    </tr>
+                    <xsl:apply-templates select="sf:Flow/sf:formulas"> </xsl:apply-templates>
+                </table>
+
+
+                 <!-- textTemplates -->
+                <a name="textTemplates"></a>
+                <h3>textTemplates</h3>
+                <table
+                    style='width:640px;'
+                    class="table table-light table-bordered table-striped table-hover">
+                    <tr>
+                        <th>name</th>
+                        <th>text</th>
+
+                    </tr>
+                    <xsl:apply-templates select="sf:Flow/sf:textTemplates"> </xsl:apply-templates>
+                </table>
+
+                 <!-- dynamicChoiceSets -->
+                <a name="dynamicChoiceSets"></a>
+                <h3>dynamicChoiceSets</h3>
+                <table
+                    style='width:640px;'
+                    class="table table-light table-bordered table-striped table-hover">
+                    <tr>
+                        <th>name</th>
+                        <th>dataType</th>
+                        <th>displayField</th>
+                        <th>object</th>
+                        <th>outputAssignments</th>
+                        <th>valueField</th>
+
+                    </tr>
+                    <xsl:apply-templates select="sf:Flow/sf:dynamicChoiceSets"> </xsl:apply-templates>
+                </table>
+
+
+                <!-- recordCreates -->
+                <a name="recordCreates"></a>
+                <h3>recordCreates</h3>
+                <table
+                    style='width:640px;'
+                    class="table table-light table-bordered table-striped table-hover">
+                    <tr>
+                        <th>name</th>
+                        <th>label</th>
+                        <th>locationX</th>
+                        <th>locationY</th>
+                        <th>connector</th>
+                        <th>valueFieinputReferenceld</th>
+                        <th>inputReference</th>
+
+                    </tr>
+                    <xsl:apply-templates select="sf:Flow/sf:recordCreates"> </xsl:apply-templates>
+                </table>
+
+
+
+                <!-- recordUpdates -->
+                <a name="recordUpdates"></a>
+                <h3>recordUpdates</h3>
+                <table
+                    style='width:640px;'
+                    class="table table-light table-bordered table-striped table-hover">
+                    <tr>
+                        <th>name</th>
+                        <th>label</th>
+                        <th>locationX</th>
+                        <th>locationY</th>
+                        <th>connector</th>
+                        <th>valueFieinputReferenceld</th>
+                        <th>inputReference</th>
+
+                    </tr>
+                    <xsl:apply-templates select="sf:Flow/sf:recordUpdates"> </xsl:apply-templates>
+                </table>
+
+                  <!-- recordLookups -->
+                <a name="recordLookups"></a>
+                <h3>recordLookups</h3>
+                <table
+                    style='width:640px;'
+                    class="table table-light table-bordered table-striped table-hover">
+                    <tr>
+                        <th>name</th>
+                        <th>label</th>
+                        <th>object</th>
+                        <th>locationX</th>
+                        <th>locationY</th>
+                        <th>connector</th>
+                        <th>assignNullValuesIfNoRecordsFound</th>
+                        <th>filters</th>
+                        <th>outputAssignments</th>
+                        <th>storeOutputAutomatically</th>
+
+                    </tr>
+                    <xsl:apply-templates select="sf:Flow/sf:recordLookups"> </xsl:apply-templates>
+                </table>
+
+
+
+
+                   <!-- processMetadataValues -->
                 <a name="processMetadataValues"></a>
                 <h3>processMetadataValues</h3>
                 <table
@@ -537,6 +691,331 @@
 
  
      </xsl:template>
+
+
+      <xsl:template match="sf:Flow/sf:formulas  ">
+                 <tr>
+                    <td>
+                        <xsl:value-of select="sf:name" />
+                    </td>
+                    <td>
+                        <xsl:value-of select="sf:dataType" />
+                    </td>
+                       <td>
+                        <xsl:value-of select="sf:expression" />
+                    </td>
+                     
+                </tr>
+     </xsl:template>
+
+
+       <xsl:template match="sf:Flow/sf:dynamicChoiceSets  ">
+                 <tr>
+                    <td>
+                        <xsl:value-of select="sf:name" />
+                    </td>
+                    <td>
+                        <xsl:value-of select="sf:dataType" />
+                    </td>
+                       <td>
+                        <xsl:value-of select="sf:displayField" />
+                    </td>
+                        <td>
+                        <xsl:value-of select="sf:object" />
+                    </td>
+                        <td>
+                                <xsl:apply-templates select="sf:outputAssignments">
+                                </xsl:apply-templates>                      
+                        </td>
+
+                        <td>
+                        <xsl:value-of select="sf:valueField" />
+                    </td>
+                     
+                </tr>
+     </xsl:template>
+
+
+     <xsl:template match="sf:outputAssignments">
+      <table style='width:640px;'
+            class="table table-light table-bordered table-striped table-hover">
+            <tr>
+                <th>assignToReference</th>
+                <th>field</th>
+            </tr>
+        <xsl:for-each select=".">
+            <tr>
+                <td>
+                    <xsl:value-of select="sf:assignToReference" />
+                </td>
+                <td>
+                    <xsl:value-of select="sf:field" />
+                </td>
+                
+            </tr>
+        </xsl:for-each>
+        </table>
+    </xsl:template>
+
+
+    <xsl:template match="sf:recordCreates">
+     
+        <xsl:for-each select=".">
+            <tr>
+                <td>
+                    <xsl:value-of select="sf:name" />
+                </td>
+                <td>
+                    <xsl:value-of select="sf:label" />
+                </td>
+             <td>
+                    <xsl:value-of select="sf:locationX" />
+                </td>
+                 <td>
+                    <xsl:value-of select="sf:locationY" />
+                </td>
+
+                 <td>
+                    <xsl:value-of select="sf:connector" />
+                </td>
+
+                 <td>
+                    <xsl:value-of select="sf:inputReference" />
+                </td>
+
+                   <td>
+                    <xsl:value-of select="sf:storeOutputAutomatically" />
+                </td>
+              
+                
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
+
+    <xsl:template match="sf:recordUpdates">
+     
+        <xsl:for-each select=".">
+            <tr>
+                <td>
+                    <xsl:value-of select="sf:name" />
+                </td>
+                <td>
+                    <xsl:value-of select="sf:label" />
+                </td>
+             <td>
+                    <xsl:value-of select="sf:locationX" />
+                </td>
+                 <td>
+                    <xsl:value-of select="sf:locationY" />
+                </td>
+
+                 <td>
+                    <xsl:value-of select="sf:connector" />
+                </td>
+
+                 <td>
+                    <xsl:value-of select="sf:inputReference" />
+                </td>
+
+                   <td>
+                    <xsl:value-of select="sf:storeOutputAutomatically" />
+                </td>
+              
+                
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
+
+
+    <xsl:template match="sf:recordLookups">
+     
+        <xsl:for-each select=".">
+            <tr>
+                <td>
+                    <xsl:value-of select="sf:name" />
+                </td>
+                <td>
+                    <xsl:value-of select="sf:label" />
+                </td>
+
+                  <td>
+                    <xsl:value-of select="sf:object" />
+                </td>
+             <td>
+                    <xsl:value-of select="sf:locationX" />
+                </td>
+                 <td>
+                    <xsl:value-of select="sf:locationY" />
+                </td>
+
+                 <td>
+                    <xsl:value-of select="sf:connector" />
+                </td>
+
+                 <td>
+                    <xsl:value-of select="sf:assignNullValuesIfNoRecordsFound" />
+                </td>
+
+                   <td>
+                    <xsl:value-of select="sf:filters" />
+                </td>
+
+                    <td>
+                    <xsl:value-of select="sf:outputAssignments" />
+                </td>
+
+
+                    <td>
+                    <xsl:value-of select="sf:storeOutputAutomatically" />
+                </td>
+              
+                
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
+
+
+
+  <xsl:template match="sf:variables">
+   
+        <xsl:for-each select=".">
+            <tr>
+                <td>
+                    <xsl:value-of select="sf:name" />
+                </td>
+                <td>
+                    <xsl:value-of select="sf:dataType" />
+                </td>
+
+                   <td>
+                    <xsl:value-of select="sf:dataType" />
+                </td>
+                  <td>
+                    <xsl:value-of select="sf:isInput" />
+                </td>
+
+                  <td>
+                    <xsl:value-of select="sf:isOutput" />
+                </td>
+                
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
+
+
+
+
+  <xsl:template match="sf:textTemplates">
+   
+        <xsl:for-each select=".">
+            <tr>
+                <td>
+                    <xsl:value-of select="sf:name" />
+                </td>
+                <td>
+                    <xsl:value-of select="sf:text" />
+                </td>
+
+                                
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
+
+
+      <xsl:template match="sf:screens">
+   
+        <xsl:for-each select=".">
+            <tr>
+                <td>
+                    <xsl:value-of select="sf:name" />
+                </td>
+                <td>
+                    <xsl:value-of select="sf:label" />
+                </td>
+
+                <td>
+                    <xsl:value-of select="sf:locationX" />
+                </td>
+                   <td>
+                    <xsl:value-of select="sf:locationY" />
+                </td>
+
+                  <td>
+                    <xsl:value-of select="sf:allowBack" />
+                </td>
+
+                   <td>
+                    <xsl:value-of select="sf:allowPause" />
+                </td>
+
+
+                   <td>
+                    <xsl:value-of select="sf:connector" />
+                </td>
+
+                  <td>
+                    <xsl:apply-templates select="sf:fields"> </xsl:apply-templates>
+
+                </td>
+
+                  <td>
+                    <xsl:value-of select="sf:showFooter" />
+                </td>
+
+                  <td>
+                    <xsl:value-of select="sf:showHeader" />
+                </td>
+
+                                
+            </tr>
+        </xsl:for-each>
+    </xsl:template>
+
+
+     <xsl:template match="sf:fields">
+     <table style='width:640px;'
+            class="table table-light table-bordered table-striped table-hover">
+            <tr>
+                <th>name</th>
+                <th>extensionName</th>
+                <th>fieldText</th>
+                <th>fieldType</th>
+                <th>isRequired</th>
+                <th>outputParameters</th>
+            </tr>
+   
+        <xsl:for-each select=".">
+            <tr>
+                <td>
+                    <xsl:value-of select="sf:name" />
+                </td>
+                <td>
+                    <xsl:value-of select="sf:extensionName" />
+                </td>
+                  <td>
+                    <xsl:value-of select="sf:fieldText" />
+                </td>
+
+                <td>
+                    <xsl:value-of select="sf:fieldType" />
+                </td>
+                   <td>
+                    <xsl:value-of select="sf:isRequired" />
+                </td>
+
+                  <td>
+                    <xsl:value-of select="sf:outputParameters" />
+                </td>
+
+                 
+
+
+                
+                                
+            </tr>
+        </xsl:for-each>
+        </table>
+    </xsl:template>
 
    
 

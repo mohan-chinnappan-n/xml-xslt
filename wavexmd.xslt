@@ -62,7 +62,7 @@
                     class="table table-light table-bordered table-striped table-hover">
                     <tr>
                         <th>field</th>
-                        <th>referenceField</th>
+                        <th>isDerived</th>
                         <th>sortIndex</th>
                         <th>linkTemplateEnabled</th>
                         <th>salesforceActionsEnabled</th>

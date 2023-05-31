@@ -1,0 +1,12 @@
+[
+    {
+        "name": "peach",
+        "qty": "100",
+        "location": "NH"
+    },
+    {
+        "name": "pear",
+        "qty": "244",
+        "location": "MA"
+    }
+]

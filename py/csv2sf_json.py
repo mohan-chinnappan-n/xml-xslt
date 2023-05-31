@@ -73,5 +73,5 @@ with open(plan_file_path, 'w') as  plan_file:
    json.dump(plan, plan_file, indent=4)
 
 
-print (f'Converion Done.\nImport data into your org with:   sfdx data:tree:import -u  $USERNAME -p {plan_file_path} ')
+print (f'Conversion Done.\nImport data into your org with:   sfdx data:tree:import -u  $USERNAME -p {plan_file_path} ')
 

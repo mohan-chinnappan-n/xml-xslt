@@ -46,5 +46,5 @@ if  args.csv_file == None :
 # Convert CSV to JSON
 csv_to_json(csv_file_path, json_file_path)
 
-print (f'Converion Done.\nJSON file:  {json_file_path} ')
+print (f'Conversion Done.\nJSON file:  {json_file_path} ')
 

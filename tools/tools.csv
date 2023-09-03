@@ -1,0 +1,29 @@
+purpose|tool
+To load large number of records to an object in Salesforce| use this tool:  sfdx mohanc:bulkapi:load  -u <username>  -f input.csv -e LF -o Case
+To update large number of records in an object in Salesforce| use this tool: sfdx mohanc:bulkapi:update  -u <username>  -f input.csv -e LF -o Case
+To delete large number of records in an object in Salesforce| use this tool: sfdx mohanc:bulkapi:delete  -u <username>  -f input.csv -e LF -o Case
+To query large number of records in an object in Salesforce| use this tool: sfdx mohanc:data:bulkapi:query  -u <username>  -q queryFile [input.soql]
+To list the recipes in CRMA| use this tool: sfdx mohanc:ea:recipe:list  -u <username>
+To find the difference between 2 files| use this tool:https://mohan-chinnappan-n5.github.io/delta/diff.html
+To visualize FlexiPage|use this tool:https://mohan-chinnappan-n5.github.io/xml/sfl-xslt.html
+To visualize CustomLabels|use this tool:https://mohan-chinnappan-n5.github.io/xml/sfl-xslt.html
+To visualize Profile|use this tool:https://mohan-chinnappan-n5.github.io/xml/sfl-xslt.html
+To visualize Permission Set|use this tool:https://mohan-chinnappan-n5.github.io/xml/sfl-xslt.html
+To visualize package.xml|use this tool:https://mohan-chinnappan-n5.github.io/xml/sfl-xslt.html
+To visualize SAML Request|use this tool:https://mohan-chinnappan-n5.github.io/xml/sfl-xslt.html
+To visualize SAML Response|use this tool:https://mohan-chinnappan-n5.github.io/xml/sfl-xslt.html
+To visualize Wave XMD|use this tool:https://mohan-chinnappan-n5.github.io/xml/sfl-xslt.html
+To visualize a Salesforce Org|use this tool:   sfdx mohanc:org:viz
+To build package.xml|use this tool:https://mohan-chinnappan-n5.github.io/pkg/pkg-gen.html
+To edit files on web|use this tool:https://mohan-chinnappan-n5.github.io/editor/simple-editor.html
+To convert YAML to JSON|use this tool:https://mohan-chinnappan-n5.github.io/yaml/yaml2json.html
+To convert JSON to YAML|use this tool:https://mohan-chinnappan-n5.github.io/yaml/json2yaml.html
+To view data catalog|use this tool:https://mohan-chinnappan-n5.github.io/dfv/catalog.html
+To Create Slides|use this tool:https://mohan-chinnappan-n5.github.io/editor/simple-editor.html
+To get glossary of Salesforce terms|use this tool: https://mohan-chinnappan-n.github.io/sfdc/data/sfdc-glossary.html
+To get a chatbot which answers Salesforce questions|use this tool: https://mohan-chinnappan-n5.github.io/2022/ai/bots/askme.html
+To draw UML sequence diagram|use this tool:https://mohan-chinnappan-n2.github.io/2019/viz/seq/seq.html
+To record screen with and without voice|use this tool: https://mohan-chinnappan-n2.github.io/media-app.html
+To OCR an image|use this tool:https://mohan-chinnappan-n2.github.io/2021/ai/ocr/ocr.html
+To take photo in a photo booth|use this tool:https://mohan-chinnappan-n2.github.io/pb/pb.html
+To play piano genie|use this tool:https://mohan-chinnappan-n2.github.io/2021/music/pg/pg.html

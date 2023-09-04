@@ -1,0 +1,15 @@
+Title: Using LLMs (leaflet) to improve Productivity of the team
+
+BusinessAnalyst->leaflet : Provide Solution \nRequirements
+leaflet->BusinessAnalyst:Solution Design
+Note right of BusinessAnalyst: This may involve\n few iterations
+
+ProjectManager->leaflet: Requests to chart out\n project plan
+
+Developer->leaflet:Requests\ncode for this solution
+Note right of leaflet:Provides access\nto LLMs \n and Custom Models
+Developer->leaflet:Requests\ncode completion
+Developer->leaflet:Requests\nTest Classes
+Developer->leaflet:Requests\nTranslation
+
+QATeam->leaflet:Requests\nQA Test Scripts
